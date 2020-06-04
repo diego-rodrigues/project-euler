@@ -5,7 +5,7 @@ object Problem7 extends App {
     def run(n: Int, div: Int): Boolean = {
       (n % div) match {
         case 0 => false
-        case _ if div > n/2 => true
+        case _ if div > math.sqrt(n).toInt => true
         case _ => run(n, div+1)
       }
     }
